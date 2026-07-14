@@ -1,6 +1,6 @@
 # HandyJSON
 
-***To deal with crash on iOS 15 beta3 please try version 5.0.4-beta***
+The maintained release is `5.0.5`, targeting current Swift/Xcode toolchains.
 
 The maintained branch currently targets iOS 12+/macOS 10.13+/watchOS 4+/tvOS
 12+ and Swift tools 5.9 or newer. HandyJSON relies on Swift runtime metadata
@@ -13,11 +13,9 @@ Compared with others, the most significant feature of HandyJSON is that it does 
 
 HandyJSON is totally depend on the memory layout rules infered from Swift runtime code. We are watching it and will follow every bit if it changes.
 
-[![Build Status](https://travis-ci.org/alibaba/HandyJSON.svg?branch=master)](https://travis-ci.org/alibaba/HandyJSON)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Cocoapods Version](https://img.shields.io/cocoapods/v/HandyJSON.svg?style=flat)](http://cocoadocs.org/docsets/HandyJSON)
 [![Cocoapods Platform](https://img.shields.io/cocoapods/p/HandyJSON.svg?style=flat)](http://cocoadocs.org/docsets/HandyJSON)
-[![Codecov branch](https://img.shields.io/codecov/c/github/alibaba/HandyJSON/master.svg?style=flat)](https://codecov.io/gh/alibaba/HandyJSON/branch/master)
 
 ## [中文文档](./README_cn.md)
 
@@ -115,22 +113,15 @@ An overview of types supported can be found at file: [BasicTypes.swift](./HandyJ
 
 # Installation
 
-**To use with Swift 5.0/5.1 ( Xcode 10.2+/11.0+ ), version == 5.0.2**
-
-**To use with Swift 4.2 ( Xcode 10 ), version == 4.2.0**
-
-**To use with Swift 4.0, version >= 4.1.1**
-
-**To use with Swift 3.x, version >= 1.8.0**
-
-For Legacy Swift2.x support, take a look at the [swift2 branch](https://github.com/alibaba/HandyJSON/tree/master_for_swift_2x).
+Older Swift compiler versions are documented in the historical upstream
+releases and are outside the support target of this maintained branch.
 
 ## Cocoapods
 
 Add the following line to your `Podfile`:
 
 ```
-pod 'HandyJSON', '~> 5.0.2'
+pod 'HandyJSON', :git => 'https://github.com/Jack182617/HandyJSON.git', :tag => '5.0.5'
 ```
 
 Then, run the following command:
@@ -144,7 +135,7 @@ $ pod install
 You can add a dependency on `HandyJSON` by adding the following line to your `Cartfile`:
 
 ```
-github "alibaba/HandyJSON" ~> 5.0.2
+github "Jack182617/HandyJSON" "5.0.5"
 ```
 
 ## Manually
@@ -154,7 +145,7 @@ You can integrate `HandyJSON` into your project manually by doing the following 
 * Open up `Terminal`, `cd` into your top-level project directory, and add `HandyJSON` as a submodule:
 
 ```
-git init && git submodule add https://github.com/alibaba/HandyJSON.git
+git init && git submodule add https://github.com/Jack182617/HandyJSON.git
 ```
 
 * Open the new `HandyJSON` folder, drag the `HandyJSON.xcodeproj` into the `Project Navigator` of your project.

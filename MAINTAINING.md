@@ -32,9 +32,8 @@ watchOS when those SDKs are installed.
 
 Before creating a release:
 
-1. Set `s.homepage` and `s.source` in `HandyJSON.podspec` to the maintained
-   repository. The current podspec still points to Alibaba intentionally until
-   the final repository URL is known.
+1. Keep `s.homepage` and `s.source` in `HandyJSON.podspec` pointed at the
+   maintained repository.
 2. Bump the package version and create a matching Git tag.
 3. Verify Swift Package Manager and CocoaPods from clean checkouts; do not
    assume that a CocoaPods `:git` URL overrides a podspec whose `s.source`

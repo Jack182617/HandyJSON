@@ -1,8 +1,17 @@
 # Change Log
 
-## [Unreleased](https://github.com/alibaba/HandyJSON/tree/HEAD)
+## [5.0.5] (2026-07-14)
 
-[Full Changelog](https://github.com/alibaba/HandyJSON/compare/1.3.0...HEAD)
+- Maintained release for current Swift and Xcode toolchains.
+- Fixed Swift runtime metadata field offsets for pure Swift classes and
+  Objective-C-rooted UIKit inheritance.
+- Added Swift Package Manager support and current platform deployment targets.
+- Added SwiftPM, iOS Simulator, and macOS test coverage for the maintained
+  runtime behavior.
+
+## [Unreleased](https://github.com/Jack182617/HandyJSON/tree/maintenance/5.x)
+
+[Full Changelog](https://github.com/Jack182617/HandyJSON/compare/5.0.5...HEAD)
 
 **Closed issues:**
 
