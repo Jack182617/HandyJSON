@@ -24,13 +24,40 @@
 
 import Foundation
 
-@_silgen_name("swift_getTypeByMangledNameInContext")
+private typealias RuntimeTypeLookup = @convention(c) (
+    UnsafePointer<UInt8>?,
+    Int,
+    UnsafeRawPointer?,
+    UnsafeRawPointer?) -> UnsafeRawPointer?
+
+private let runtimeTypeLookup: RuntimeTypeLookup? = {
+    #if canImport(Darwin)
+    guard let handle = dlopen(nil, RTLD_NOW),
+          let symbol = dlsym(handle, "swift_getTypeByMangledNameInContext") else {
+        return nil
+    }
+    #elseif canImport(Glibc)
+    guard let handle = dlopen(nil, RTLD_NOW),
+          let symbol = dlsym(handle, "swift_getTypeByMangledNameInContext") else {
+        return nil
+    }
+    #else
+    return nil
+    #endif
+
+    return unsafeBitCast(symbol, to: RuntimeTypeLookup.self)
+}()
+
 public func _getTypeByMangledNameInContext(
     _ name: UnsafePointer<UInt8>,
     _ nameLength: Int,
     genericContext: UnsafeRawPointer?,
-    genericArguments: UnsafeRawPointer?)
-    -> Any.Type?
+    genericArguments: UnsafeRawPointer?) -> Any.Type? {
+    guard let typeMetadata = runtimeTypeLookup?(name, nameLength, genericContext, genericArguments) else {
+        return nil
+    }
+    return unsafeBitCast(typeMetadata, to: Any.Type.self)
+}
 
 
 @_silgen_name("swift_getTypeContextDescriptor")

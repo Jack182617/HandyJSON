@@ -272,4 +272,3 @@ extension _ExtendCustomModelType {
         return dict
     }
 }
-

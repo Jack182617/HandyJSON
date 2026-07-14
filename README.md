@@ -2,6 +2,11 @@
 
 ***To deal with crash on iOS 15 beta3 please try version 5.0.4-beta***
 
+The maintained branch currently targets iOS 12+/macOS 10.13+/watchOS 4+/tvOS
+12+ and Swift tools 5.9 or newer. HandyJSON relies on Swift runtime metadata
+and direct property-memory writes, so every Xcode/Swift upgrade must pass the
+repository's full test matrix before release.
+
 HandyJSON is a framework written in Swift which to make converting model objects( **pure classes/structs** ) to and from JSON easy on iOS.
 
 Compared with others, the most significant feature of HandyJSON is that it does not require the objects inherit from NSObject(**not using KVC but reflection**), neither implements a 'mapping' function(**writing value to memory directly to achieve property assignment**).
@@ -104,9 +109,9 @@ An overview of types supported can be found at file: [BasicTypes.swift](./HandyJ
 
 # Requirements
 
-* iOS 8.0+/OSX 10.9+/watchOS 2.0+/tvOS 9.0+
+* iOS 12.0+/OSX 10.13+/watchOS 4.0+/tvOS 12.0+
 
-* Swift 3.0+ / Swift 4.0+ / Swift 5.0+
+* Swift 5.9+ / Xcode 15+
 
 # Installation
 

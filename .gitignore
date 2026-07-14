@@ -17,3 +17,6 @@ DerivedData
 *.xcworkspace
 Pods/
 Products/
+.build/
+.swiftpm/
+xcuserdata/

@@ -8,6 +8,8 @@
 
 import Foundation
 import XCTest
+
+#if canImport(UIKit)
 import HandyJSON
 
 class OCUIInheritanceTests: XCTestCase {
@@ -40,3 +42,4 @@ class OCUIInheritanceTests: XCTestCase {
         XCTAssertEqual(mappedObject!.c, 0.5678)
     }
 }
+#endif

@@ -25,8 +25,8 @@ protocol PointerType : Equatable {
 
 extension PointerType {
     init<T>(pointer: UnsafePointer<T>) {
-        func cast<T, U>(_ value: T) -> U {
-            return unsafeBitCast(value, to: U.self)
+        func cast<Source, Destination>(_ value: Source) -> Destination {
+            return unsafeBitCast(value, to: Destination.self)
         }
         self = cast(UnsafePointer<Pointee>(pointer))
     }

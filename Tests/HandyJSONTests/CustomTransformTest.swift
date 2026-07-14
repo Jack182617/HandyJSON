@@ -24,7 +24,7 @@
 import XCTest
 import HandyJSON
 
-class CustomMappingTest: XCTestCase {
+class CustomTransformTest: XCTestCase {
 
     override func setUp() {
         super.setUp()

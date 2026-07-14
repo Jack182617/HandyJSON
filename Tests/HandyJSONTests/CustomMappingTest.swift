@@ -234,7 +234,7 @@ class CustomMappingTest: XCTestCase {
             var upperName: String?
             required init() {}
             
-            func afterMap() {
+            func didFinishMapping() {
                 upperName = name?.uppercased()
             }
         }
@@ -249,7 +249,7 @@ class CustomMappingTest: XCTestCase {
             var name: String?
             var upperName: String?
             
-            mutating func afterMap() {
+            mutating func didFinishMapping() {
                 upperName = name?.uppercased()
             }
         }

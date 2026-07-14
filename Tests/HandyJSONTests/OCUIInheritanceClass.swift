@@ -7,6 +7,8 @@
 //
 
 import Foundation
+
+#if canImport(UIKit)
 import UIKit
 import HandyJSON
 
@@ -19,3 +21,4 @@ class InheritFromUIViewControllerClass: UIViewController, HandyJSON {
 class SubClassOfInheritFromUIViewController: InheritFromUIViewControllerClass {
     var c: Double?
 }
+#endif
