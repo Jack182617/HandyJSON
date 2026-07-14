@@ -1,5 +1,10 @@
 # Change Log
 
+## [5.0.6] (2026-07-14)
+
+- Removed obsolete Swift 4 manifest and `.swift-version` configuration so the
+  maintained package has one supported Swift toolchain entry point.
+
 ## [5.0.5] (2026-07-14)
 
 - Maintained release for current Swift and Xcode toolchains.

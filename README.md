@@ -1,6 +1,6 @@
 # HandyJSON
 
-The maintained release is `5.0.5`, targeting current Swift/Xcode toolchains.
+The maintained release is `5.0.6`, targeting current Swift/Xcode toolchains.
 
 The maintained branch currently targets iOS 12+/macOS 10.13+/watchOS 4+/tvOS
 12+ and Swift tools 5.9 or newer. HandyJSON relies on Swift runtime metadata
@@ -121,7 +121,7 @@ releases and are outside the support target of this maintained branch.
 Add the following line to your `Podfile`:
 
 ```
-pod 'HandyJSON', :git => 'https://github.com/Jack182617/HandyJSON.git', :tag => '5.0.5'
+pod 'HandyJSON', :git => 'https://github.com/Jack182617/HandyJSON.git', :tag => '5.0.6'
 ```
 
 Then, run the following command:
@@ -135,7 +135,7 @@ $ pod install
 You can add a dependency on `HandyJSON` by adding the following line to your `Cartfile`:
 
 ```
-github "Jack182617/HandyJSON" "5.0.5"
+github "Jack182617/HandyJSON" "5.0.6"
 ```
 
 ## Manually
